@@ -2,15 +2,16 @@
 
 ****
 
-## | Description
+### Description
 `This standard cipher comes with a twist! Flag Format:
 KCTF{Fl4g_H3Re}`
 
 ****
-### | Solution
 
+### Solution
 
-<p>we are given with 2 attached text files :</p>
+<br>
+we are given with 2 attached text files :
 
 [cipher.txt](https://github.com/IC3lemon/Knight-ctf/files/14000204/cipher.txt)
 [note.txt](https://github.com/IC3lemon/Knight-ctf/files/14000212/note.txt)
@@ -43,18 +44,20 @@ So they're telling us we gotta perform an XOR between `usedistofindouttheseed` a
 and then do some "seed" stuff w/ it. I got no clue what that means.<br>
 
 but first, I decided to XOR those two<br>
-I used <a href = "https://toolslick.com/math/bitwise/xor-calculator">this</a> site to do the same.<br>
+I used <a href = "https://www.dcode.fr/xor-cipher">this</a> site to do the same.<br>
 
 and got this guy `413673984171035014537352995108480568815660353722135`
-as the decimal result.
+as the integer number result.
 
-Now to use this thing as the "seed" for something.<br>
+Now to use this thing as the "seed" for something.
 
-a few minutes of googling later I found out about the `rand()` and `srand()` function in c++.<br>
-and like in the challenge name "***Random** Shamir Adleman*" I thought this was prolly the way to go.<br>
+a few minutes of googling later I found out about the `rand()` and `srand()` function in c++.\
+and like in the challenge name, "***Random** Shamir Adleman*"\
+I thought this was prolly the way to go.
 
 I found out that you could "seed" the rand function. (couldn't get any more relevant)<br>
-![image](https://github.com/IC3lemon/Knight-ctf/assets/150153966/bd6db51a-b8e9-4e96-a63d-b73acb9b954e)
+![image](https://github.com/IC3lemon/Knight-ctf/assets/150153966/ba495b2c-ef4e-49e1-b849-350dc385063c)
+
 
 So I opened up a python compiler and did this :<br>
 
