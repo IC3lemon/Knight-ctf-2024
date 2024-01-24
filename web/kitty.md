@@ -1,11 +1,11 @@
-<h1><u>kitty</u></h1>
-
->**Description**
+# kitty
+****
+### **Description**
 
 `Tetanus is a serious, potentially life-threatening infection that can be transmitted by an animal bite.`
 
-
->**Solution**
+****
+### **Solution**
 <p>When going on the target site we have this :
 </p>
 
@@ -24,12 +24,11 @@ I tried the usual `cat flag.txt`
 
 ![image](https://github.com/IC3lemon/Knight-ctf/assets/150153966/aa576f13-9235-40a3-8168-e818361914cc)
 
-<p>and it indeed was that easy.</p>
+and it indeed was that easy.
 
->**Flag**
-`KCTF{Fram3S_n3vE9_L1e_4_toGEtH3R}`
-
-
+***
+### **Flag > `KCTF{Fram3S_n3vE9_L1e_4_toGEtH3R}`**
+***
 
 
 
