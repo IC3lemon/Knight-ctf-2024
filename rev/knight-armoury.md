@@ -25,8 +25,7 @@ NOTE : managed to solve this *after* the ctf.
 ## Solution
 
 we are given with a file `knight_armoury`\
-decompiled it with binary ninja and found this in the strings\
-found this guy:\
+decompiled it with binary ninja and found this guy in the strings\
 ![image](https://github.com/IC3lemon/Knight-ctf/assets/150153966/66d18d41-e9cc-40be-a0ea-8567b4304436)\
 `IaMaKnight`
 
