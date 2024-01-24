@@ -51,6 +51,6 @@ If only I tried this shit earlier ffs.
 
 ***
 
-## Flag > KCTF{kN1gHT_aRm0uRy_aCC3ss_GranTed}
+## Flag > `KCTF{kN1gHT_aRm0uRy_aCC3ss_GranTed}`
 
 ***
