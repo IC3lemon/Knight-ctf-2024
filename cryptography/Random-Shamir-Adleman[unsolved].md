@@ -1,4 +1,4 @@
-# **Random-Shamir-Adleman [unsolved]**
+# **Random-Shamir-Adleman [FINALLY SOLVED LESGO]**
 
 ****
 
