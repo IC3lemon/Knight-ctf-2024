@@ -11,7 +11,7 @@ Challenges solved - 4
 | :----------- | ------------------------------------ | -------------- |
 | Rev | Dragon's binary | Solved |
 |     | Knight armoury | Solved [after ctf] |
-| crypto | Random Shamir Adleman | Unsolved |
+| crypto | Random Shamir Adleman | Solved [after ctf] |
 | web | Kitty | Solved |
 | networking | Vicker's IP | Solved |
 
