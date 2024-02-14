@@ -83,3 +83,75 @@ I decided to check that.
 
 
 
+
+UPDATE :
+
+
+Turns out I was on the right track.\
+This is almost a month after the ctf but I've managed to solve it.
+
+I just had to find the next prime number to my earlier output.\
+AND THAT WAS P.\
+bruhhhh.
+
+I did stuff in this order:\
+1. XOR 'usedistofindouttheseed' and 'thisisthekeytogetyourseed'
+2. seed the rand with this XOR'd value
+3. get a 256 bit random number
+4. find the nextprime to this random number
+5. this guy is p
+6. put p,q,c,e into an rsa decoder
+
+here's the code I used : 
+
+```python
+from Crypto.Util.number import *
+import sympy
+import random
+
+def sXOR(a,b):
+    a_ke_bytes = []
+    b_ke_bytes = []
+    for i in a:
+        a_ke_bytes.append(bin(ord(i))[2:])
+    for i in b:
+        b_ke_bytes.append(bin(ord(i))[2:])
+    num1 = int(''.join(a_ke_bytes), 2)
+    num2 = int(''.join(b_ke_bytes), 2)
+    result = num1 ^ num2
+    return result
+
+str1 = 'usedistofindouttheseed'
+str2 = 'thisisthekeytogetyourseed'
+
+seed = sXOR(str1,str2)
+random.seed(seed)
+c = 1913607487336850198612381177842742944535528551492332730687709803333994170933334235248158693072452023061642877943692858799822420964044267542215434514413393
+p = sympy.nextprime(random.getrandbits(256))
+q = 81950208731605030173072901497240676460946134422613059941413476068465656250011
+e = 65537
+N = p * q
+print("c => "+str(c))
+print("p => "+str(p))
+print("q => "+str(q))
+print("e => "+str(e))
+print("N => "+str(N))
+```
+
+```
+c => 1913607487336850198612381177842742944535528551492332730687709803333994170933334235248158693072452023061642877943692858799822420964044267542215434514413393
+p => 69741716681423118542834588968007281757658875608479690139723526814390717818213
+q => 81950208731605030173072901497240676460946134422613059941413476068465656250011
+e => 65537
+N => 5715348239343085037628413821199168147425144754093390410437089483084108841828118188121729740762480994851807889187448972062093060449305836515479545177250343
+```
+
+![image](https://github.com/IC3lemon/Knight-ctf-2024/assets/150153966/df48f61d-895e-4d3e-869f-76f45b5f16c2)
+
+![image](https://github.com/IC3lemon/Knight-ctf-2024/assets/150153966/d92229b8-d8b1-4ed5-afd9-7b64c9fc33ce)
+
+***
+
+### Flag > `KCTF{ju57_57d_r54_w17h_61v3n_533d_v4lu3_d6ae7c3f}`
+
+
