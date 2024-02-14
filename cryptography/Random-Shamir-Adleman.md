@@ -86,9 +86,9 @@ I decided to check that.
 
 UPDATE :
 
-
+I read the writeups.\
 Turns out I was on the right track.\
-This is almost a month after the ctf but I've managed to solve it.
+This is almost a month after the ctf but I've managed to solve it by myself.
 
 I just had to find the next prime number to my earlier output.\
 AND THAT WAS P.\
@@ -105,7 +105,6 @@ I did stuff in this order:\
 here's the code I used : 
 
 ```python
-from Crypto.Util.number import *
 import sympy
 import random
 
